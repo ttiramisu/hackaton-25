@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Checker</title>
+</head>
+
+<body>
+
+  <label for="animals">Choose what animal to check</label>
+  <select name="animals" id="animals">
+    <option value="Lion">Lion</option>
+    <option value="Tiger">Tiger</option>
+    <option value="Rhino">Rhino</option>
+    <option value="Elephant">Elephant</option>
+  </select>
+
+  <input type="submit" value="Submit" onclick="chooseAnimal()">
+
+
+  <script>
+    const chooseAnimal = function () {
+      let animal = document.getElementById('animals').value;
+      animal = animal.toLowerCase();
+      console.log(animal);
+      window.location.href = (`/animal=${animal}`);
+    }
+  </script>
+</body>
+
+</html>
